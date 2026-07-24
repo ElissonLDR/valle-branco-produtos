@@ -1,0 +1,9 @@
+# Ignorar arquivos locais / sensíveis
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+.env
+*.sql
+*.zip
