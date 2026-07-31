@@ -13,6 +13,7 @@ require_once ABSPATH . 'wp-admin/includes/media.php';
 require_once ABSPATH . 'wp-admin/includes/image.php';
 
 define( 'VB_LOVABLE_ASSETS', 'C:/Users/eliss/Desktop/V4 Company/02. SITES/VALLE BRANCO/site-valle-branco/src/assets/' );
+define( 'VB_ARTIGOS_IMAGENS', __DIR__ . '/artigos-imagens/' );
 /**
  * Dados exportados de site-valle-branco/src/data/artigos.ts
  *
@@ -86,9 +87,12 @@ function vb_upload_lovable_image( $filename ) {
 		return (int) $existing[0];
 	}
 
-	$path = VB_LOVABLE_ASSETS . $filename;
+	$path = VB_ARTIGOS_IMAGENS . $filename;
 	if ( ! file_exists( $path ) ) {
-		fwrite( STDERR, "Imagem ausente: {$path}\n" );
+		$path = VB_LOVABLE_ASSETS . $filename;
+	}
+	if ( ! file_exists( $path ) ) {
+		fwrite( STDERR, "Imagem ausente: {$filename}\n" );
 		exit( 1 );
 	}
 
@@ -201,11 +205,13 @@ function vb_find_imported_post( $slug ) {
 $cat_receita = vb_ensure_category( 'Receita', 'receita' );
 $cat_artigo  = vb_ensure_category( 'Artigo', 'artigo' );
 
-$images = array(
-	'receita-palmito-ovo.webp' => vb_upload_lovable_image( 'receita-palmito-ovo.webp' ),
-	'receita-feijao-ovo.webp'  => vb_upload_lovable_image( 'receita-feijao-ovo.webp' ),
-	'receita-prato-feito.webp' => vb_upload_lovable_image( 'receita-prato-feito.webp' ),
-);
+$images = array();
+foreach ( vb_lovable_artigos() as $artigo_img ) {
+	$key = (string) $artigo_img['imageKey'];
+	if ( $key && ! isset( $images[ $key ] ) ) {
+		$images[ $key ] = vb_upload_lovable_image( $key );
+	}
+}
 
 echo "Imagens na mídia:\n";
 foreach ( $images as $file => $id ) {

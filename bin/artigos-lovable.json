@@ -1,534 +1,534 @@
 [
-  {
-    "slug": "risoto-cremoso-palmito-valle-branco",
-    "tag": "Receita",
-    "title": "Risoto cremoso de palmito Valle Branco",
-    "desc": "Cremoso e sofisticado, com palmito inteiro fatiado no final do cozimento.",
-    "imageKey": "receita-palmito-ovo.webp",
-    "publishedAt": "2026-06-18",
-    "readingTime": "8 min",
-    "resumo": "Aprenda a fazer risoto cremoso de palmito Valle Branco em cerca de 35 minutos, com arroz arbóreo, caldo quente e palmito de pupunha fatiado no final para preservar textura e sabor.",
-    "pontosChave": [
-      "Use arroz arbóreo e caldo sempre quente.",
-      "Adicione o palmito Valle Branco nos últimos minutos.",
-      "Finalize com manteiga e queijo fora do fogo.",
-      "Rende 4 porções como prato principal."
-    ],
-    "secoes": [
-      {
-        "id": "ingredientes",
-        "titulo": "Ingredientes",
-        "itens": [
-          "1 lata de palmito Valle Branco inteiro (300 g), fatiado",
-          "320 g de arroz arbóreo Valle Branco",
-          "1,2 L de caldo de legumes quente",
-          "1 cebola média picada",
-          "2 dentes de alho amassados",
-          "100 ml de vinho branco seco",
-          "3 colheres de sopa de manteiga",
-          "50 g de queijo ralado Valle Branco ou parmesão",
-          "Sal, pimenta-do-reino e azeite a gosto"
-        ]
-      },
-      {
-        "id": "modo-preparo",
-        "titulo": "Modo de preparo",
-        "passos": [
-          "Refogue cebola e alho no azeite até ficarem transparentes.",
-          "Adicione o arroz e toste por 2 minutos, mexendo sempre.",
-          "Acrescente o vinho e deixe evaporar.",
-          "Vá adicionando o caldo quente, uma concha por vez, até o arroz ficar al dente.",
-          "Fora do fogo, incorpore manteiga e queijo ralado.",
-          "Finalize com o palmito fatiado, ajuste o sal e sirva na hora."
-        ]
-      },
-      {
-        "id": "dicas",
-        "titulo": "Dicas Valle Branco",
-        "paragrafos": [
-          "O palmito entra quase no final para não desmanchar e manter a crocância.",
-          "Para uma versão mais leve, troque parte da manteiga por azeite extra virgem."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Qual arroz usar no risoto de palmito?",
-        "resposta": "O arroz arbóreo Valle Branco libera amido aos poucos e garante a textura cremosa típica do risoto."
-      },
-      {
-        "pergunta": "Posso usar palmito em rodelas?",
-        "resposta": "Sim. O palmito em rodelas também funciona; reduza o tempo no fogo para manter a firmeza."
-      }
-    ]
-  },
-  {
-    "slug": "arroz-integral-com-legumes",
-    "tag": "Receita",
-    "title": "Arroz integral com legumes coloridos",
-    "desc": "Opção nutritiva para marmitas e almoços leves com arroz integral Valle Branco.",
-    "imageKey": "receita-prato-feito.webp",
-    "publishedAt": "2026-05-22",
-    "readingTime": "7 min",
-    "resumo": "Receita de arroz integral Valle Branco com cenoura, abobrinha e ervilha. Proporção de 1 xícara de arroz para cerca de 2,5 de água, pronta em 40 minutos.",
-    "pontosChave": [
-      "Arroz integral pede mais água e tempo de cozimento.",
-      "Legumes aumentam fibras, cor e vitaminas.",
-      "Ideal para marmita e refeições do dia a dia.",
-      "Serve como prato único ou acompanhamento."
-    ],
-    "secoes": [
-      {
-        "id": "ingredientes",
-        "titulo": "Ingredientes",
-        "itens": [
-          "2 xícaras de arroz integral Valle Branco",
-          "1 cenoura em cubos pequenos",
-          "1 abobrinha em cubos",
-          "1/2 xícara de ervilha",
-          "1 cebola picada",
-          "2 colheres de sopa de azeite",
-          "Sal, pimenta e salsinha a gosto"
-        ]
-      },
-      {
-        "id": "preparo",
-        "titulo": "Modo de preparo",
-        "passos": [
-          "Refogue a cebola no azeite até dourar.",
-          "Acrescente os legumes e refogue por 3 minutos.",
-          "Adicione o arroz integral e misture bem.",
-          "Cubra com água quente, tempere e cozinhe em fogo baixo com tampa.",
-          "Descanse 5 minutos e solte com um garfo antes de servir."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Quanto tempo leva o arroz integral?",
-        "resposta": "Em média de 35 a 45 minutos, conforme a panela e a intensidade do fogo."
-      },
-      {
-        "pergunta": "Posso congelar?",
-        "resposta": "Sim. Porcione em potes, congele e reaqueça com um fio de azeite ou um pouco de água."
-      }
-    ]
-  },
-  {
-    "slug": "salada-refrescante-palmito-tomate",
-    "tag": "Receita",
-    "title": "Salada refrescante de palmito e tomate",
-    "desc": "Pronta em 10 minutos, sem fogo, perfeita para o verão e churrascos.",
-    "imageKey": "receita-palmito-ovo.webp",
-    "publishedAt": "2026-04-10",
-    "readingTime": "4 min",
-    "resumo": "Salada rápida com palmito Valle Branco em rodelas, tomate cereja, cebola roxa, azeite e limão. Sem cozimento e ideal para acompanhar grelhados.",
-    "pontosChave": [
-      "Receita rápida e sem fogão.",
-      "Combina com carnes e peixes grelhados.",
-      "Use palmito em rodelas ou picado.",
-      "Monte na hora de servir para ficar crocante."
-    ],
-    "secoes": [
-      {
-        "id": "ingredientes",
-        "titulo": "Ingredientes",
-        "itens": [
-          "1 lata de palmito Valle Branco em rodelas",
-          "200 g de tomate cereja cortado ao meio",
-          "1/4 de cebola roxa em fatias finas",
-          "Azeite, limão, sal e manjericão a gosto"
-        ]
-      },
-      {
-        "id": "preparo",
-        "titulo": "Preparo",
-        "passos": [
-          "Escorra o palmito e seque levemente com papel-toalha.",
-          "Misture palmito, tomate e cebola em uma tigela.",
-          "Tempere com azeite, limão, sal e manjericão.",
-          "Sirva imediatamente."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Posso preparar com antecedência?",
-        "resposta": "Separe os ingredientes antes e tempere só na hora de servir para manter a textura do palmito."
-      }
-    ]
-  },
-  {
-    "slug": "feijao-tropeiro-carioca-valle-branco",
-    "tag": "Receita",
-    "title": "Feijão tropeiro com feijão carioca Valle Branco",
-    "desc": "Clássico mineiro reforçado, com feijão carioca tipo 1 e farinha de mandioca.",
-    "imageKey": "receita-feijao-ovo.webp",
-    "publishedAt": "2026-03-28",
-    "readingTime": "9 min",
-    "resumo": "Receita de feijão tropeiro com feijão carioca Valle Branco tipo 1, bacon, linguiça, ovos e farinha de mandioca. Serve 6 pessoas e combina com arroz soltinho.",
-    "pontosChave": [
-      "Use feijão carioca já cozido e escorrido.",
-      "Farinha entra por último para não endurecer.",
-      "Ótimo para finais de semana e reuniões.",
-      "Sobras rendem um jantar rápido no dia seguinte."
-    ],
-    "secoes": [
-      {
-        "id": "ingredientes",
-        "titulo": "Ingredientes",
-        "itens": [
-          "4 xícaras de feijão carioca Valle Branco cozido",
-          "150 g de bacon em cubos",
-          "2 linguiças calabresa fatiadas",
-          "3 ovos",
-          "1 cebola e 3 dentes de alho",
-          "2 xícaras de farinha de mandioca torrada",
-          "Cheiro-verde, sal e pimenta a gosto"
-        ]
-      },
-      {
-        "id": "preparo",
-        "titulo": "Modo de preparo",
-        "passos": [
-          "Frite o bacon até dourar; reserve parte da gordura.",
-          "Na mesma panela, doure a linguiça e reserve.",
-          "Refogue cebola e alho; frite os ovos mexidos.",
-          "Volte bacon e linguiça, acrescente o feijão e misture.",
-          "Desligue o fogo, junte a farinha aos poucos e o cheiro-verde.",
-          "Ajuste o sal e sirva com arroz Valle Branco."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Posso usar feijão preto?",
-        "resposta": "Sim, mas o carioca é o mais tradicional no tropeiro. O feijão preto Valle Branco também fica saboroso com o mesmo método."
-      },
-      {
-        "pergunta": "O feijão precisa estar bem seco?",
-        "resposta": "Sim. Escorra bem o caldo para a farinha absorver sem formar pasta mole demais."
-      }
-    ]
-  },
-  {
-    "slug": "arroz-de-forno-queijo-ralado-valle-branco",
-    "tag": "Receita",
-    "title": "Arroz de forno com queijo ralado Valle Branco",
-    "desc": "Gratinado dourado, prático para o domingo em família.",
-    "imageKey": "receita-prato-feito.webp",
-    "publishedAt": "2026-02-14",
-    "readingTime": "8 min",
-    "resumo": "Arroz de forno cremoso com frango desfiado, milho e queijo ralado Valle Branco fiapo. Assa em 25 minutos a 200 °C até gratinar.",
-    "pontosChave": [
-      "Aproveita arroz do dia anterior.",
-      "Queijo ralado Valle Branco doura e puxa fio.",
-      "Montagem em camadas facilita o serviço.",
-      "Rende cerca de 6 porções."
-    ],
-    "secoes": [
-      {
-        "id": "ingredientes",
-        "titulo": "Ingredientes",
-        "itens": [
-          "4 xícaras de arroz Valle Branco cozido",
-          "2 xícaras de frango desfiado temperado",
-          "1 lata de milho escorrido",
-          "200 ml de creme de leite",
-          "100 g de queijo ralado Valle Branco",
-          "Sal, orégano e azeite a gosto"
-        ]
-      },
-      {
-        "id": "preparo",
-        "titulo": "Modo de preparo",
-        "passos": [
-          "Unte um refratário e espalhe metade do arroz.",
-          "Cubra com frango, milho e um pouco de creme de leite.",
-          "Finalize com o restante do arroz e mais creme.",
-          "Polvilhe o queijo ralado Valle Branco e orégano.",
-          "Asse a 200 °C por cerca de 25 minutos até dourar."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Posso fazer sem frango?",
-        "resposta": "Sim. Substitua por legumes refogados, palmito picado Valle Branco ou carne moída."
-      }
-    ]
-  },
-  {
-    "slug": "tutu-feijao-preto-valle-branco",
-    "tag": "Receita",
-    "title": "Tutu de feijão preto Valle Branco",
-    "desc": "Cremoso, econômico e clássico da mesa brasileira.",
-    "imageKey": "receita-feijao-ovo.webp",
-    "publishedAt": "2026-01-20",
-    "readingTime": "7 min",
-    "resumo": "Tutu de feijão preto Valle Branco com farinha de mandioca, bacon e temperos. Pronto em poucos minutos depois que o feijão já está cozido.",
-    "pontosChave": [
-      "Use feijão preto bem cozido e com caldo.",
-      "Farinha aos poucos evita grumos.",
-      "Combina com arroz, ovo frito e couve.",
-      "Receita econômica para o dia a dia."
-    ],
-    "secoes": [
-      {
-        "id": "ingredientes",
-        "titulo": "Ingredientes",
-        "itens": [
-          "3 xícaras de feijão preto Valle Branco cozido com caldo",
-          "100 g de bacon em cubos",
-          "1 cebola e 2 dentes de alho",
-          "1 a 1,5 xícara de farinha de mandioca",
-          "Cheiro-verde, sal e pimenta a gosto"
-        ]
-      },
-      {
-        "id": "preparo",
-        "titulo": "Modo de preparo",
-        "passos": [
-          "Frite o bacon até crocante; reserve.",
-          "Refogue cebola e alho na gordura do bacon.",
-          "Acrescente o feijão com parte do caldo e amasse levemente.",
-          "Desligue o fogo e vá polvilhando a farinha, mexendo sempre.",
-          "Incorpore o bacon e o cheiro-verde; ajuste o sal."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "O tutu fica duro no outro dia?",
-        "resposta": "Pode firmar. Ao reaquecer, acrescente um pouco de água ou caldo e mexa em fogo baixo."
-      }
-    ]
-  },
-  {
-    "slug": "beneficios-arroz-integral-alimentacao",
-    "tag": "Artigo",
-    "title": "Benefícios do arroz integral na alimentação",
-    "desc": "Fibras, vitaminas e energia de liberação gradual para a rotina.",
-    "imageKey": "receita-prato-feito.webp",
-    "publishedAt": "2026-06-02",
-    "readingTime": "6 min",
-    "resumo": "O arroz integral Valle Branco conserva mais fibras e nutrientes do grão, favorece a saciedade e combina com legumes, proteínas magras e bowls do dia a dia.",
-    "pontosChave": [
-      "Mais fibras que o arroz branco polido.",
-      "Fonte de energia para rotina ativa.",
-      "Ajuda na saciedade entre as refeições.",
-      "Versátil em saladas, bowls e pratos quentes."
-    ],
-    "secoes": [
-      {
-        "id": "nutrientes",
-        "titulo": "O que o arroz integral oferece",
-        "paragrafos": [
-          "Por não passar pelo polimento total, o arroz integral retém nutrientes da camada externa do grão, incluindo fibras e micronutrientes ligados ao metabolismo energético."
-        ],
-        "itens": [
-          "Fibras que auxiliam o funcionamento intestinal.",
-          "Vitaminas do complexo B.",
-          "Magnésio e fósforo presentes no grão completo."
-        ]
-      },
-      {
-        "id": "como-incluir",
-        "titulo": "Como incluir na dieta",
-        "paragrafos": [
-          "Troque parte do arroz branco pelo integral no almoço ou jantar. Comece com misturas 50/50 se quiser adaptar o paladar aos poucos.",
-          "O arroz integral Valle Branco tipo 1 mantém padrão de qualidade e rendimento previsível na panela."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Arroz integral engorda?",
-        "resposta": "Nenhum alimento isolado engorda. Em porção adequada, o integral entra bem em uma alimentação equilibrada."
-      },
-      {
-        "pergunta": "Substitui o arroz branco em qualquer receita?",
-        "resposta": "Na maioria sim, mas o tempo de cozimento é maior e a textura fica mais firme."
-      }
-    ]
-  },
-  {
-    "slug": "proteinas-fibras-feijao-carioca",
-    "tag": "Artigo",
-    "title": "Proteínas e fibras do feijão carioca",
-    "desc": "Por que o feijão carioca é protagonista na nutrição do brasileiro.",
-    "imageKey": "receita-feijao-ovo.webp",
-    "publishedAt": "2026-05-08",
-    "readingTime": "6 min",
-    "resumo": "O feijão carioca Valle Branco fornece proteínas vegetais e fibras, combina com o arroz no prato feito e ajuda a manter saciedade e custo acessível na alimentação familiar.",
-    "pontosChave": [
-      "Boa fonte de proteína vegetal.",
-      "Fibras favorecem saciedade e digestão.",
-      "Par clássico com o arroz branco ou integral.",
-      "Custo-benefício alto no cardápio semanal."
-    ],
-    "secoes": [
-      {
-        "id": "nutricao",
-        "titulo": "Nutrição do feijão carioca",
-        "paragrafos": [
-          "O feijão carioca é o mais consumido no Brasil. Além do sabor suave, entrega proteínas vegetais e fibras que complementam o arroz na refeição.",
-          "Escolher feijão tipo 1, como o Valle Branco, ajuda no rendimento e na textura cremosa após o cozimento."
-        ]
-      },
-      {
-        "id": "dicas-consumo",
-        "titulo": "Dicas de consumo",
-        "itens": [
-          "Deixe de molho para reduzir o tempo de cozimento.",
-          "Congele porções do feijão pronto para a semana.",
-          "Use o caldo no tutu, na sopa ou no tropeiro."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Feijão substitui carne?",
-        "resposta": "É uma excelente fonte vegetal de proteína, mas o ideal é diversificar o cardápio com outras proteínas ao longo da semana."
-      },
-      {
-        "pergunta": "Preciso lavar o feijão?",
-        "resposta": "Sim. Enxágue em água corrente e retire grãos quebrados antes do molho."
-      }
-    ]
-  },
-  {
-    "slug": "palmito-pupunha-na-dieta",
-    "tag": "Artigo",
-    "title": "Por que incluir palmito de pupunha na dieta",
-    "desc": "Praticidade, leveza e versatilidade nas refeições.",
-    "imageKey": "receita-palmito-ovo.webp",
-    "publishedAt": "2026-04-02",
-    "readingTime": "5 min",
-    "resumo": "O palmito de pupunha Valle Branco é leve, versátil e pronto para uso em saladas, risotos e recheios, uma forma prática de variar o prato sem abrir mão do sabor.",
-    "pontosChave": [
-      "Produto pronto para uso após abrir a lata.",
-      "Baixo em calorias e versátil no cardápio.",
-      "Disponível inteiro, em rodelas ou picado.",
-      "Combina com pratos frios e quentes."
-    ],
-    "secoes": [
-      {
-        "id": "vantagens",
-        "titulo": "Vantagens do palmito de pupunha",
-        "paragrafos": [
-          "O palmito de pupunha tem sabor delicado e textura firme. Em conserva, como o Valle Branco, chega pronto para a mesa, reduzindo tempo de preparo."
-        ],
-        "itens": [
-          "Ideal para quem busca refeições rápidas.",
-          "Enriquece saladas sem pesar.",
-          "Substitui parte de ingredientes mais calóricos em gratinados e tortas."
-        ]
-      },
-      {
-        "id": "como-usar",
-        "titulo": "Como usar no dia a dia",
-        "paragrafos": [
-          "Escorra bem antes de usar. Em receitas quentes, acrescente nos minutos finais. Em saladas, tempere na hora de servir."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Palmito de pupunha e açaí são a mesma planta?",
-        "resposta": "Não. São espécies diferentes. O palmito de pupunha é cultivado especialmente para esse fim e é comum em conservas no Brasil."
-      }
-    ]
-  },
-  {
-    "slug": "arroz-feijao-combinacao-nutricional",
-    "tag": "Artigo",
-    "title": "Arroz e feijão: combinação nutricional completa",
-    "desc": "O duo clássico da mesa brasileira sob o olhar da nutrição.",
-    "imageKey": "receita-prato-feito.webp",
-    "publishedAt": "2026-03-12",
-    "readingTime": "7 min",
-    "resumo": "Arroz e feijão formam uma combinação nutricional complementar: carboidratos do arroz e proteínas e fibras do feijão sustentam o prato feito brasileiro com equilíbrio e tradição.",
-    "pontosChave": [
-      "Complementam aminoácidos na refeição.",
-      "Base cultural e nutricional do Brasil.",
-      "Cabem no almoço e no jantar.",
-      "Fácil de variar com legumes e carnes magras."
-    ],
-    "secoes": [
-      {
-        "id": "por-que-combinar",
-        "titulo": "Por que arroz e feijão se completam",
-        "paragrafos": [
-          "O arroz contribui principalmente com energia; o feijão adiciona proteínas vegetais e fibras. Juntos, sustentam refeições sacientes e acessíveis.",
-          "Manter esse hábito com produtos de qualidade, como arroz e feijão Valle Branco, preserva sabor e rendimento no cozimento."
-        ]
-      },
-      {
-        "id": "variacoes",
-        "titulo": "Variações saudáveis",
-        "itens": [
-          "Alterne feijão carioca e feijão preto.",
-          "Inclua arroz integral algumas vezes na semana.",
-          "Complete o prato com salada e uma proteína magra."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "Qual a proporção ideal no prato?",
-        "resposta": "Uma referência comum é cerca de duas partes de arroz para uma de feijão, ajustando à fome e às necessidades de cada pessoa."
-      },
-      {
-        "pergunta": "Posso comer todo dia?",
-        "resposta": "Sim, desde que o restante do cardápio seja variado com legumes, frutas e outras fontes de nutrientes."
-      }
-    ]
-  },
-  {
-    "slug": "prato-equilibrado-graos-valle-branco",
-    "tag": "Artigo",
-    "title": "Como montar um prato equilibrado com grãos Valle Branco",
-    "desc": "Guia prático para almoço e jantar com arroz, feijão e acompanhamentos.",
-    "imageKey": "receita-feijao-ovo.webp",
-    "publishedAt": "2026-02-05",
-    "readingTime": "6 min",
-    "resumo": "Monte um prato equilibrado com arroz e feijão Valle Branco, legumes coloridos, uma proteína e, se quiser, palmito ou salada: um modelo simples para o dia a dia.",
-    "pontosChave": [
-      "Metade do prato com vegetais quando possível.",
-      "Arroz e feijão como base energética e proteica vegetal.",
-      "Proteína magra em porção moderada.",
-      "Hidratação e variedade ao longo da semana."
-    ],
-    "secoes": [
-      {
-        "id": "modelo",
-        "titulo": "Modelo de prato",
-        "passos": [
-          "Comece pelos legumes ou pela salada.",
-          "Adicione arroz Valle Branco (branco ou integral).",
-          "Inclua uma concha de feijão carioca ou preto.",
-          "Complete com ovo, frango, peixe ou carne magra.",
-          "Opcional: palmito Valle Branco ou queijo ralado."
-        ]
-      },
-      {
-        "id": "rotina",
-        "titulo": "Encaixe na rotina",
-        "paragrafos": [
-          "Cozinhe feijão em quantidade e congele. Deixe o arroz do dia ou use sobras no arroz de forno. Pequenos hábitos reduzem o tempo na cozinha sem perder qualidade."
-        ]
-      }
-    ],
-    "faq": [
-      {
-        "pergunta": "E quem treina ou tem mais demanda de energia?",
-        "resposta": "Aumente a porção de arroz e a proteína conforme orientação de um nutricionista, mantendo vegetais no prato."
-      },
-      {
-        "pergunta": "Crianças podem seguir o mesmo modelo?",
-        "resposta": "Sim, com porções menores e texturas adequadas à idade. Varie cores e formatos para estimular o aceite."
-      }
-    ]
-  }
+    {
+        "slug":  "risoto-cremoso-palmito-valle-branco",
+        "tag":  "Receita",
+        "title":  "Risoto cremoso de palmito Valle Branco",
+        "desc":  "Cremoso e sofisticado, com palmito inteiro fatiado no final do cozimento.",
+        "imageKey":  "risoto-cremoso-palmito-valle-branco.webp",
+        "publishedAt":  "2026-06-18",
+        "readingTime":  "8 min",
+        "resumo":  "Aprenda a fazer risoto cremoso de palmito Valle Branco em cerca de 35 minutos, com arroz arbóreo, caldo quente e palmito de pupunha fatiado no final para preservar textura e sabor.",
+        "pontosChave":  [
+                            "Use arroz arbóreo e caldo sempre quente.",
+                            "Adicione o palmito Valle Branco nos últimos minutos.",
+                            "Finalize com manteiga e queijo fora do fogo.",
+                            "Rende 4 porções como prato principal."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "ingredientes",
+                           "titulo":  "Ingredientes",
+                           "itens":  [
+                                         "1 lata de palmito Valle Branco inteiro (300 g), fatiado",
+                                         "320 g de arroz arbóreo Valle Branco",
+                                         "1,2 L de caldo de legumes quente",
+                                         "1 cebola média picada",
+                                         "2 dentes de alho amassados",
+                                         "100 ml de vinho branco seco",
+                                         "3 colheres de sopa de manteiga",
+                                         "50 g de queijo ralado Valle Branco ou parmesão",
+                                         "Sal, pimenta-do-reino e azeite a gosto"
+                                     ]
+                       },
+                       {
+                           "id":  "modo-preparo",
+                           "titulo":  "Modo de preparo",
+                           "passos":  [
+                                          "Refogue cebola e alho no azeite até ficarem transparentes.",
+                                          "Adicione o arroz e toste por 2 minutos, mexendo sempre.",
+                                          "Acrescente o vinho e deixe evaporar.",
+                                          "Vá adicionando o caldo quente, uma concha por vez, até o arroz ficar al dente.",
+                                          "Fora do fogo, incorpore manteiga e queijo ralado.",
+                                          "Finalize com o palmito fatiado, ajuste o sal e sirva na hora."
+                                      ]
+                       },
+                       {
+                           "id":  "dicas",
+                           "titulo":  "Dicas Valle Branco",
+                           "paragrafos":  [
+                                              "O palmito entra quase no final para não desmanchar e manter a crocância.",
+                                              "Para uma versão mais leve, troque parte da manteiga por azeite extra virgem."
+                                          ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Qual arroz usar no risoto de palmito?",
+                        "resposta":  "O arroz arbóreo Valle Branco libera amido aos poucos e garante a textura cremosa típica do risoto."
+                    },
+                    {
+                        "pergunta":  "Posso usar palmito em rodelas?",
+                        "resposta":  "Sim. O palmito em rodelas também funciona; reduza o tempo no fogo para manter a firmeza."
+                    }
+                ]
+    },
+    {
+        "slug":  "arroz-integral-com-legumes",
+        "tag":  "Receita",
+        "title":  "Arroz integral com legumes coloridos",
+        "desc":  "Opção nutritiva para marmitas e almoços leves com arroz integral Valle Branco.",
+        "imageKey":  "arroz-integral-com-legumes.webp",
+        "publishedAt":  "2026-05-22",
+        "readingTime":  "7 min",
+        "resumo":  "Receita de arroz integral Valle Branco com cenoura, abobrinha e ervilha. Proporção de 1 xícara de arroz para cerca de 2,5 de água, pronta em 40 minutos.",
+        "pontosChave":  [
+                            "Arroz integral pede mais água e tempo de cozimento.",
+                            "Legumes aumentam fibras, cor e vitaminas.",
+                            "Ideal para marmita e refeições do dia a dia.",
+                            "Serve como prato único ou acompanhamento."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "ingredientes",
+                           "titulo":  "Ingredientes",
+                           "itens":  [
+                                         "2 xícaras de arroz integral Valle Branco",
+                                         "1 cenoura em cubos pequenos",
+                                         "1 abobrinha em cubos",
+                                         "1/2 xícara de ervilha",
+                                         "1 cebola picada",
+                                         "2 colheres de sopa de azeite",
+                                         "Sal, pimenta e salsinha a gosto"
+                                     ]
+                       },
+                       {
+                           "id":  "preparo",
+                           "titulo":  "Modo de preparo",
+                           "passos":  [
+                                          "Refogue a cebola no azeite até dourar.",
+                                          "Acrescente os legumes e refogue por 3 minutos.",
+                                          "Adicione o arroz integral e misture bem.",
+                                          "Cubra com água quente, tempere e cozinhe em fogo baixo com tampa.",
+                                          "Descanse 5 minutos e solte com um garfo antes de servir."
+                                      ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Quanto tempo leva o arroz integral?",
+                        "resposta":  "Em média de 35 a 45 minutos, conforme a panela e a intensidade do fogo."
+                    },
+                    {
+                        "pergunta":  "Posso congelar?",
+                        "resposta":  "Sim. Porcione em potes, congele e reaqueça com um fio de azeite ou um pouco de água."
+                    }
+                ]
+    },
+    {
+        "slug":  "salada-refrescante-palmito-tomate",
+        "tag":  "Receita",
+        "title":  "Salada refrescante de palmito e tomate",
+        "desc":  "Pronta em 10 minutos, sem fogo, perfeita para o verão e churrascos.",
+        "imageKey":  "salada-refrescante-palmito-tomate.webp",
+        "publishedAt":  "2026-04-10",
+        "readingTime":  "4 min",
+        "resumo":  "Salada rápida com palmito Valle Branco em rodelas, tomate cereja, cebola roxa, azeite e limão. Sem cozimento e ideal para acompanhar grelhados.",
+        "pontosChave":  [
+                            "Receita rápida e sem fogão.",
+                            "Combina com carnes e peixes grelhados.",
+                            "Use palmito em rodelas ou picado.",
+                            "Monte na hora de servir para ficar crocante."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "ingredientes",
+                           "titulo":  "Ingredientes",
+                           "itens":  [
+                                         "1 lata de palmito Valle Branco em rodelas",
+                                         "200 g de tomate cereja cortado ao meio",
+                                         "1/4 de cebola roxa em fatias finas",
+                                         "Azeite, limão, sal e manjericão a gosto"
+                                     ]
+                       },
+                       {
+                           "id":  "preparo",
+                           "titulo":  "Preparo",
+                           "passos":  [
+                                          "Escorra o palmito e seque levemente com papel-toalha.",
+                                          "Misture palmito, tomate e cebola em uma tigela.",
+                                          "Tempere com azeite, limão, sal e manjericão.",
+                                          "Sirva imediatamente."
+                                      ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Posso preparar com antecedência?",
+                        "resposta":  "Separe os ingredientes antes e tempere só na hora de servir para manter a textura do palmito."
+                    }
+                ]
+    },
+    {
+        "slug":  "feijao-tropeiro-carioca-valle-branco",
+        "tag":  "Receita",
+        "title":  "Feijão tropeiro com feijão carioca Valle Branco",
+        "desc":  "Clássico mineiro reforçado, com feijão carioca tipo 1 e farinha de mandioca.",
+        "imageKey":  "feijao-tropeiro-carioca-valle-branco.webp",
+        "publishedAt":  "2026-03-28",
+        "readingTime":  "9 min",
+        "resumo":  "Receita de feijão tropeiro com feijão carioca Valle Branco tipo 1, bacon, linguiça, ovos e farinha de mandioca. Serve 6 pessoas e combina com arroz soltinho.",
+        "pontosChave":  [
+                            "Use feijão carioca já cozido e escorrido.",
+                            "Farinha entra por último para não endurecer.",
+                            "Ótimo para finais de semana e reuniões.",
+                            "Sobras rendem um jantar rápido no dia seguinte."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "ingredientes",
+                           "titulo":  "Ingredientes",
+                           "itens":  [
+                                         "4 xícaras de feijão carioca Valle Branco cozido",
+                                         "150 g de bacon em cubos",
+                                         "2 linguiças calabresa fatiadas",
+                                         "3 ovos",
+                                         "1 cebola e 3 dentes de alho",
+                                         "2 xícaras de farinha de mandioca torrada",
+                                         "Cheiro-verde, sal e pimenta a gosto"
+                                     ]
+                       },
+                       {
+                           "id":  "preparo",
+                           "titulo":  "Modo de preparo",
+                           "passos":  [
+                                          "Frite o bacon até dourar; reserve parte da gordura.",
+                                          "Na mesma panela, doure a linguiça e reserve.",
+                                          "Refogue cebola e alho; frite os ovos mexidos.",
+                                          "Volte bacon e linguiça, acrescente o feijão e misture.",
+                                          "Desligue o fogo, junte a farinha aos poucos e o cheiro-verde.",
+                                          "Ajuste o sal e sirva com arroz Valle Branco."
+                                      ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Posso usar feijão preto?",
+                        "resposta":  "Sim, mas o carioca é o mais tradicional no tropeiro. O feijão preto Valle Branco também fica saboroso com o mesmo método."
+                    },
+                    {
+                        "pergunta":  "O feijão precisa estar bem seco?",
+                        "resposta":  "Sim. Escorra bem o caldo para a farinha absorver sem formar pasta mole demais."
+                    }
+                ]
+    },
+    {
+        "slug":  "arroz-de-forno-queijo-ralado-valle-branco",
+        "tag":  "Receita",
+        "title":  "Arroz de forno com queijo ralado Valle Branco",
+        "desc":  "Gratinado dourado, prático para o domingo em família.",
+        "imageKey":  "arroz-de-forno-queijo-ralado-valle-branco.webp",
+        "publishedAt":  "2026-02-14",
+        "readingTime":  "8 min",
+        "resumo":  "Arroz de forno cremoso com frango desfiado, milho e queijo ralado Valle Branco fiapo. Assa em 25 minutos a 200 °C até gratinar.",
+        "pontosChave":  [
+                            "Aproveita arroz do dia anterior.",
+                            "Queijo ralado Valle Branco doura e puxa fio.",
+                            "Montagem em camadas facilita o serviço.",
+                            "Rende cerca de 6 porções."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "ingredientes",
+                           "titulo":  "Ingredientes",
+                           "itens":  [
+                                         "4 xícaras de arroz Valle Branco cozido",
+                                         "2 xícaras de frango desfiado temperado",
+                                         "1 lata de milho escorrido",
+                                         "200 ml de creme de leite",
+                                         "100 g de queijo ralado Valle Branco",
+                                         "Sal, orégano e azeite a gosto"
+                                     ]
+                       },
+                       {
+                           "id":  "preparo",
+                           "titulo":  "Modo de preparo",
+                           "passos":  [
+                                          "Unte um refratário e espalhe metade do arroz.",
+                                          "Cubra com frango, milho e um pouco de creme de leite.",
+                                          "Finalize com o restante do arroz e mais creme.",
+                                          "Polvilhe o queijo ralado Valle Branco e orégano.",
+                                          "Asse a 200 °C por cerca de 25 minutos até dourar."
+                                      ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Posso fazer sem frango?",
+                        "resposta":  "Sim. Substitua por legumes refogados, palmito picado Valle Branco ou carne moída."
+                    }
+                ]
+    },
+    {
+        "slug":  "tutu-feijao-preto-valle-branco",
+        "tag":  "Receita",
+        "title":  "Tutu de feijão preto Valle Branco",
+        "desc":  "Cremoso, econômico e clássico da mesa brasileira.",
+        "imageKey":  "tutu-feijao-preto-valle-branco.webp",
+        "publishedAt":  "2026-01-20",
+        "readingTime":  "7 min",
+        "resumo":  "Tutu de feijão preto Valle Branco com farinha de mandioca, bacon e temperos. Pronto em poucos minutos depois que o feijão já está cozido.",
+        "pontosChave":  [
+                            "Use feijão preto bem cozido e com caldo.",
+                            "Farinha aos poucos evita grumos.",
+                            "Combina com arroz, ovo frito e couve.",
+                            "Receita econômica para o dia a dia."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "ingredientes",
+                           "titulo":  "Ingredientes",
+                           "itens":  [
+                                         "3 xícaras de feijão preto Valle Branco cozido com caldo",
+                                         "100 g de bacon em cubos",
+                                         "1 cebola e 2 dentes de alho",
+                                         "1 a 1,5 xícara de farinha de mandioca",
+                                         "Cheiro-verde, sal e pimenta a gosto"
+                                     ]
+                       },
+                       {
+                           "id":  "preparo",
+                           "titulo":  "Modo de preparo",
+                           "passos":  [
+                                          "Frite o bacon até crocante; reserve.",
+                                          "Refogue cebola e alho na gordura do bacon.",
+                                          "Acrescente o feijão com parte do caldo e amasse levemente.",
+                                          "Desligue o fogo e vá polvilhando a farinha, mexendo sempre.",
+                                          "Incorpore o bacon e o cheiro-verde; ajuste o sal."
+                                      ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "O tutu fica duro no outro dia?",
+                        "resposta":  "Pode firmar. Ao reaquecer, acrescente um pouco de água ou caldo e mexa em fogo baixo."
+                    }
+                ]
+    },
+    {
+        "slug":  "beneficios-arroz-integral-alimentacao",
+        "tag":  "Artigo",
+        "title":  "Benefícios do arroz integral na alimentação",
+        "desc":  "Fibras, vitaminas e energia de liberação gradual para a rotina.",
+        "imageKey":  "beneficios-arroz-integral-alimentacao.webp",
+        "publishedAt":  "2026-06-02",
+        "readingTime":  "6 min",
+        "resumo":  "O arroz integral Valle Branco conserva mais fibras e nutrientes do grão, favorece a saciedade e combina com legumes, proteínas magras e bowls do dia a dia.",
+        "pontosChave":  [
+                            "Mais fibras que o arroz branco polido.",
+                            "Fonte de energia para rotina ativa.",
+                            "Ajuda na saciedade entre as refeições.",
+                            "Versátil em saladas, bowls e pratos quentes."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "nutrientes",
+                           "titulo":  "O que o arroz integral oferece",
+                           "paragrafos":  [
+                                              "Por não passar pelo polimento total, o arroz integral retém nutrientes da camada externa do grão, incluindo fibras e micronutrientes ligados ao metabolismo energético."
+                                          ],
+                           "itens":  [
+                                         "Fibras que auxiliam o funcionamento intestinal.",
+                                         "Vitaminas do complexo B.",
+                                         "Magnésio e fósforo presentes no grão completo."
+                                     ]
+                       },
+                       {
+                           "id":  "como-incluir",
+                           "titulo":  "Como incluir na dieta",
+                           "paragrafos":  [
+                                              "Troque parte do arroz branco pelo integral no almoço ou jantar. Comece com misturas 50/50 se quiser adaptar o paladar aos poucos.",
+                                              "O arroz integral Valle Branco tipo 1 mantém padrão de qualidade e rendimento previsível na panela."
+                                          ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Arroz integral engorda?",
+                        "resposta":  "Nenhum alimento isolado engorda. Em porção adequada, o integral entra bem em uma alimentação equilibrada."
+                    },
+                    {
+                        "pergunta":  "Substitui o arroz branco em qualquer receita?",
+                        "resposta":  "Na maioria sim, mas o tempo de cozimento é maior e a textura fica mais firme."
+                    }
+                ]
+    },
+    {
+        "slug":  "proteinas-fibras-feijao-carioca",
+        "tag":  "Artigo",
+        "title":  "Proteínas e fibras do feijão carioca",
+        "desc":  "Por que o feijão carioca é protagonista na nutrição do brasileiro.",
+        "imageKey":  "proteinas-fibras-feijao-carioca.webp",
+        "publishedAt":  "2026-05-08",
+        "readingTime":  "6 min",
+        "resumo":  "O feijão carioca Valle Branco fornece proteínas vegetais e fibras, combina com o arroz no prato feito e ajuda a manter saciedade e custo acessível na alimentação familiar.",
+        "pontosChave":  [
+                            "Boa fonte de proteína vegetal.",
+                            "Fibras favorecem saciedade e digestão.",
+                            "Par clássico com o arroz branco ou integral.",
+                            "Custo-benefício alto no cardápio semanal."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "nutricao",
+                           "titulo":  "Nutrição do feijão carioca",
+                           "paragrafos":  [
+                                              "O feijão carioca é o mais consumido no Brasil. Além do sabor suave, entrega proteínas vegetais e fibras que complementam o arroz na refeição.",
+                                              "Escolher feijão tipo 1, como o Valle Branco, ajuda no rendimento e na textura cremosa após o cozimento."
+                                          ]
+                       },
+                       {
+                           "id":  "dicas-consumo",
+                           "titulo":  "Dicas de consumo",
+                           "itens":  [
+                                         "Deixe de molho para reduzir o tempo de cozimento.",
+                                         "Congele porções do feijão pronto para a semana.",
+                                         "Use o caldo no tutu, na sopa ou no tropeiro."
+                                     ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Feijão substitui carne?",
+                        "resposta":  "É uma excelente fonte vegetal de proteína, mas o ideal é diversificar o cardápio com outras proteínas ao longo da semana."
+                    },
+                    {
+                        "pergunta":  "Preciso lavar o feijão?",
+                        "resposta":  "Sim. Enxágue em água corrente e retire grãos quebrados antes do molho."
+                    }
+                ]
+    },
+    {
+        "slug":  "palmito-pupunha-na-dieta",
+        "tag":  "Artigo",
+        "title":  "Por que incluir palmito de pupunha na dieta",
+        "desc":  "Praticidade, leveza e versatilidade nas refeições.",
+        "imageKey":  "palmito-pupunha-na-dieta.webp",
+        "publishedAt":  "2026-04-02",
+        "readingTime":  "5 min",
+        "resumo":  "O palmito de pupunha Valle Branco é leve, versátil e pronto para uso em saladas, risotos e recheios, uma forma prática de variar o prato sem abrir mão do sabor.",
+        "pontosChave":  [
+                            "Produto pronto para uso após abrir a lata.",
+                            "Baixo em calorias e versátil no cardápio.",
+                            "Disponível inteiro, em rodelas ou picado.",
+                            "Combina com pratos frios e quentes."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "vantagens",
+                           "titulo":  "Vantagens do palmito de pupunha",
+                           "paragrafos":  [
+                                              "O palmito de pupunha tem sabor delicado e textura firme. Em conserva, como o Valle Branco, chega pronto para a mesa, reduzindo tempo de preparo."
+                                          ],
+                           "itens":  [
+                                         "Ideal para quem busca refeições rápidas.",
+                                         "Enriquece saladas sem pesar.",
+                                         "Substitui parte de ingredientes mais calóricos em gratinados e tortas."
+                                     ]
+                       },
+                       {
+                           "id":  "como-usar",
+                           "titulo":  "Como usar no dia a dia",
+                           "paragrafos":  [
+                                              "Escorra bem antes de usar. Em receitas quentes, acrescente nos minutos finais. Em saladas, tempere na hora de servir."
+                                          ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Palmito de pupunha e açaí são a mesma planta?",
+                        "resposta":  "Não. São espécies diferentes. O palmito de pupunha é cultivado especialmente para esse fim e é comum em conservas no Brasil."
+                    }
+                ]
+    },
+    {
+        "slug":  "arroz-feijao-combinacao-nutricional",
+        "tag":  "Artigo",
+        "title":  "Arroz e feijão: combinação nutricional completa",
+        "desc":  "O duo clássico da mesa brasileira sob o olhar da nutrição.",
+        "imageKey":  "arroz-feijao-combinacao-nutricional.webp",
+        "publishedAt":  "2026-03-12",
+        "readingTime":  "7 min",
+        "resumo":  "Arroz e feijão formam uma combinação nutricional complementar: carboidratos do arroz e proteínas e fibras do feijão sustentam o prato feito brasileiro com equilíbrio e tradição.",
+        "pontosChave":  [
+                            "Complementam aminoácidos na refeição.",
+                            "Base cultural e nutricional do Brasil.",
+                            "Cabem no almoço e no jantar.",
+                            "Fácil de variar com legumes e carnes magras."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "por-que-combinar",
+                           "titulo":  "Por que arroz e feijão se completam",
+                           "paragrafos":  [
+                                              "O arroz contribui principalmente com energia; o feijão adiciona proteínas vegetais e fibras. Juntos, sustentam refeições sacientes e acessíveis.",
+                                              "Manter esse hábito com produtos de qualidade, como arroz e feijão Valle Branco, preserva sabor e rendimento no cozimento."
+                                          ]
+                       },
+                       {
+                           "id":  "variacoes",
+                           "titulo":  "Variações saudáveis",
+                           "itens":  [
+                                         "Alterne feijão carioca e feijão preto.",
+                                         "Inclua arroz integral algumas vezes na semana.",
+                                         "Complete o prato com salada e uma proteína magra."
+                                     ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "Qual a proporção ideal no prato?",
+                        "resposta":  "Uma referência comum é cerca de duas partes de arroz para uma de feijão, ajustando à fome e às necessidades de cada pessoa."
+                    },
+                    {
+                        "pergunta":  "Posso comer todo dia?",
+                        "resposta":  "Sim, desde que o restante do cardápio seja variado com legumes, frutas e outras fontes de nutrientes."
+                    }
+                ]
+    },
+    {
+        "slug":  "prato-equilibrado-graos-valle-branco",
+        "tag":  "Artigo",
+        "title":  "Como montar um prato equilibrado com grãos Valle Branco",
+        "desc":  "Guia prático para almoço e jantar com arroz, feijão e acompanhamentos.",
+        "imageKey":  "prato-equilibrado-graos-valle-branco.webp",
+        "publishedAt":  "2026-02-05",
+        "readingTime":  "6 min",
+        "resumo":  "Monte um prato equilibrado com arroz e feijão Valle Branco, legumes coloridos, uma proteína e, se quiser, palmito ou salada: um modelo simples para o dia a dia.",
+        "pontosChave":  [
+                            "Metade do prato com vegetais quando possível.",
+                            "Arroz e feijão como base energética e proteica vegetal.",
+                            "Proteína magra em porção moderada.",
+                            "Hidratação e variedade ao longo da semana."
+                        ],
+        "secoes":  [
+                       {
+                           "id":  "modelo",
+                           "titulo":  "Modelo de prato",
+                           "passos":  [
+                                          "Comece pelos legumes ou pela salada.",
+                                          "Adicione arroz Valle Branco (branco ou integral).",
+                                          "Inclua uma concha de feijão carioca ou preto.",
+                                          "Complete com ovo, frango, peixe ou carne magra.",
+                                          "Opcional: palmito Valle Branco ou queijo ralado."
+                                      ]
+                       },
+                       {
+                           "id":  "rotina",
+                           "titulo":  "Encaixe na rotina",
+                           "paragrafos":  [
+                                              "Cozinhe feijão em quantidade e congele. Deixe o arroz do dia ou use sobras no arroz de forno. Pequenos hábitos reduzem o tempo na cozinha sem perder qualidade."
+                                          ]
+                       }
+                   ],
+        "faq":  [
+                    {
+                        "pergunta":  "E quem treina ou tem mais demanda de energia?",
+                        "resposta":  "Aumente a porção de arroz e a proteína conforme orientação de um nutricionista, mantendo vegetais no prato."
+                    },
+                    {
+                        "pergunta":  "Crianças podem seguir o mesmo modelo?",
+                        "resposta":  "Sim, com porções menores e texturas adequadas à idade. Varie cores e formatos para estimular o aceite."
+                    }
+                ]
+    }
 ]
