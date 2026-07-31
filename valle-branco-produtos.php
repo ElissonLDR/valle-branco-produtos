@@ -3,7 +3,7 @@
  * Plugin Name:       Valle Branco — Produtos
  * Plugin URI:        https://vallebranco.com.br
  * Description:       Catálogo de produtos leve (sem WooCommerce): painel, galeria, tabela nutricional e widgets Elementor / Theme Builder.
- * Version:           1.0.5
+ * Version:           1.4.9
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Valle Branco
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'VB_PROD_VERSION', '1.4.8' );
+define( 'VB_PROD_VERSION', '1.4.9' );
 define( 'VB_PROD_FILE', __FILE__ );
 define( 'VB_PROD_PATH', plugin_dir_path( __FILE__ ) );
 define( 'VB_PROD_URL', plugin_dir_url( __FILE__ ) );
