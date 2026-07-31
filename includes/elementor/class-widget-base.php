@@ -212,7 +212,7 @@ abstract class VB_Prod_Widget_Base extends \Elementor\Widget_Base {
 				'label'        => __( 'Mostrar categoria', 'valle-branco-produtos' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
-				'default'      => 'yes',
+				'default'      => '',
 			)
 		);
 		$this->add_control(
@@ -403,6 +403,7 @@ abstract class VB_Prod_Widget_Base extends \Elementor\Widget_Base {
 				'label'     => __( 'Cor da meta', 'valle-branco-produtos' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
+					'{{WRAPPER}} .vb-prod-card:hover .vb-prod-card__marca' => 'color: {{VALUE}};',
 					'{{WRAPPER}} .vb-prod-card:hover .vb-prod-card__meta' => 'color: {{VALUE}};',
 				),
 			)
@@ -466,7 +467,7 @@ abstract class VB_Prod_Widget_Base extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'estilo_meta_card',
 			array(
-				'label' => __( 'Meta (marca/categoria)', 'valle-branco-produtos' ),
+				'label' => __( 'Marca / meta', 'valle-branco-produtos' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -474,7 +475,7 @@ abstract class VB_Prod_Widget_Base extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'typo_meta',
-				'selector' => '{{WRAPPER}} .vb-prod-card__meta',
+				'selector' => '{{WRAPPER}} .vb-prod-card__marca, {{WRAPPER}} .vb-prod-card__meta',
 			)
 		);
 		$this->add_control(
@@ -483,7 +484,8 @@ abstract class VB_Prod_Widget_Base extends \Elementor\Widget_Base {
 				'label'     => __( 'Cor', 'valle-branco-produtos' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .vb-prod-card__meta' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .vb-prod-card__marca' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .vb-prod-card__meta'  => 'color: {{VALUE}};',
 				),
 			)
 		);
@@ -613,8 +615,9 @@ abstract class VB_Prod_Widget_Base extends \Elementor\Widget_Base {
 		return array(
 			'tipo'           => isset( $s['card_tipo'] ) ? $s['card_tipo'] : 'padrao',
 			'show_image'     => ! isset( $s['show_image'] ) || 'yes' === $s['show_image'],
-			'show_marca'     => ! isset( $s['show_marca'] ) || 'yes' === $s['show_marca'],
-			'show_categoria' => ! isset( $s['show_categoria'] ) || 'yes' === $s['show_categoria'],
+			// Grade: marca sempre acima do título (pedido de layout).
+			'show_marca'     => true,
+			'show_categoria' => isset( $s['show_categoria'] ) && 'yes' === $s['show_categoria'],
 			'show_excerpt'   => isset( $s['show_excerpt'] ) && 'yes' === $s['show_excerpt'],
 			'show_btn'       => ! isset( $s['show_btn'] ) || 'yes' === $s['show_btn'],
 			'btn_text'       => isset( $s['btn_text'] ) ? $s['btn_text'] : '',

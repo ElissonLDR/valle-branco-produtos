@@ -110,8 +110,8 @@ class VB_Prod_Widget_Busca extends VB_Prod_Widget_Base {
 			'ajuda',
 			array(
 				'type'            => \Elementor\Controls_Manager::RAW_HTML,
-				'raw'             => __( 'Botão circular com lupa: ao clicar, abre o campo <strong>abaixo</strong>. Fecha ao clicar fora ou pressionar Esc. Use junto com a <strong>Grade de produtos</strong>.', 'valle-branco-produtos' ),
-				'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
+				'raw'             => '<div style="padding:12px;background:#1e1f22;border:1px solid #3d3f44;border-radius:6px;line-height:1.5;color:#f3f3f3;font-size:12px;">' . __( 'Botão circular com lupa: ao clicar, abre o campo <strong style="color:#fff;">abaixo</strong>. Fecha ao clicar fora ou pressionar Esc. Use junto com a <strong style="color:#fff;">Grade de produtos</strong>.', 'valle-branco-produtos' ) . '</div>',
+				'content_classes' => '',
 			)
 		);
 		$this->add_control(

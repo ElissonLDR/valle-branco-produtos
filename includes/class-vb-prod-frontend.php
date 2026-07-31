@@ -25,8 +25,62 @@ class VB_Prod_Frontend {
 		add_action( 'elementor/preview/enqueue_scripts', array( __CLASS__, 'enqueue' ) );
 		add_action( 'elementor/editor/after_enqueue_styles', array( $this, 'register_assets' ) );
 		add_action( 'elementor/editor/after_enqueue_styles', array( __CLASS__, 'enqueue' ) );
+		add_action( 'pre_get_posts', array( $this, 'filtrar_catalogo_publico' ) );
+		add_filter( 'rest_vb-produtos_query', array( $this, 'filtrar_rest_catalogo' ), 10, 1 );
+		add_filter( 'elementor/query/query_args', array( $this, 'filtrar_elementor_query' ), 10, 2 );
 		add_shortcode( 'vb_produto_carrossel', array( $this, 'shortcode_carrossel' ) );
 		add_shortcode( 'vb_produto_nutricao', array( $this, 'shortcode_nutricao' ) );
+	}
+
+	/**
+	 * No front, só produtos marcados como catálogo (exclui os do mapa).
+	 *
+	 * @param WP_Query $query Query.
+	 */
+	public function filtrar_catalogo_publico( $query ) {
+		if ( is_admin() || ! $query instanceof WP_Query || ! $query->is_main_query() ) {
+			return;
+		}
+		$post_type = $query->get( 'post_type' );
+		$is_prod   = ( VB_Prod_CPT::POST_TYPE === $post_type ) || $query->is_singular( VB_Prod_CPT::POST_TYPE );
+		if ( ! $is_prod ) {
+			return;
+		}
+		$meta = $query->get( 'meta_query' );
+		if ( ! is_array( $meta ) ) {
+			$meta = array();
+		}
+		$meta[] = VB_Prod_Product::catalogo_meta_query()[0];
+		$query->set( 'meta_query', $meta );
+	}
+
+	/**
+	 * REST do CPT só retorna catálogo.
+	 *
+	 * @param array $args Args.
+	 * @return array
+	 */
+	public function filtrar_rest_catalogo( $args ) {
+		return VB_Prod_Product::apply_catalogo_args( is_array( $args ) ? $args : array() );
+	}
+
+	/**
+	 * Loops Elementor do CPT só retornam catálogo.
+	 *
+	 * @param array $args Args.
+	 * @param mixed $widget Widget.
+	 * @return array
+	 */
+	public function filtrar_elementor_query( $args, $widget = null ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter
+		$post_type = isset( $args['post_type'] ) ? $args['post_type'] : '';
+		if ( is_array( $post_type ) ) {
+			if ( ! in_array( VB_Prod_CPT::POST_TYPE, $post_type, true ) ) {
+				return $args;
+			}
+		} elseif ( VB_Prod_CPT::POST_TYPE !== $post_type ) {
+			return $args;
+		}
+		return VB_Prod_Product::apply_catalogo_args( is_array( $args ) ? $args : array() );
 	}
 
 	/**
@@ -151,6 +205,7 @@ class VB_Prod_Frontend {
 
 	/**
 	 * HTML das tabelas do produto (Pacote / Pallet / Tributação).
+	 * Com 2+ variações, agrupa e exibe título da embalagem/SKU acima de cada trio.
 	 *
 	 * @param int $post_id ID.
 	 * @return string
@@ -162,51 +217,135 @@ class VB_Prod_Frontend {
 		}
 		self::enqueue();
 
+		$grupos = self::agrupar_fichas( $data['tabelas'] );
+		$multi  = count( $grupos ) > 1;
+
 		ob_start();
 		?>
-		<div class="vb-prod-fichas">
-			<?php foreach ( $data['tabelas'] as $tabela ) : ?>
-				<?php
-				$estilo = ! empty( $tabela['estilo'] ) ? $tabela['estilo'] : 'azul';
-				$titulo = isset( $tabela['titulo'] ) ? $tabela['titulo'] : '';
-				$linhas = ! empty( $tabela['linhas'] ) ? $tabela['linhas'] : array();
-				if ( '' === $titulo && empty( $linhas ) ) {
-					continue;
-				}
-				?>
-				<section class="vb-prod-ficha vb-prod-ficha--<?php echo esc_attr( $estilo ); ?>">
-					<?php if ( $titulo ) : ?>
-						<h3 class="vb-prod-ficha__titulo"><?php echo esc_html( $titulo ); ?></h3>
+		<div class="vb-prod-fichas<?php echo $multi ? ' vb-prod-fichas--multi' : ''; ?>">
+			<?php foreach ( $grupos as $grupo ) : ?>
+				<div class="vb-prod-ficha-grupo">
+					<?php if ( $multi && ! empty( $grupo['label'] ) ) : ?>
+						<h3 class="vb-prod-ficha-grupo__titulo"><?php echo esc_html( $grupo['label'] ); ?></h3>
 					<?php endif; ?>
-					<?php if ( ! empty( $linhas ) ) : ?>
-						<ul class="vb-prod-ficha__lista">
-							<?php foreach ( $linhas as $linha ) : ?>
-								<?php
-								$campo = isset( $linha['campo'] ) ? $linha['campo'] : '';
-								$valor = isset( $linha['valor'] ) ? $linha['valor'] : '';
-								if ( '' === $campo && '' === $valor ) {
-									continue;
-								}
-								?>
-								<li class="vb-prod-ficha__item">
-									<?php if ( $campo ) : ?>
-										<span class="vb-prod-ficha__campo"><?php echo esc_html( $campo ); ?></span>
-									<?php endif; ?>
-									<?php if ( $campo && '' !== $valor ) : ?>
-										<span class="vb-prod-ficha__sep" aria-hidden="true">-</span>
-									<?php endif; ?>
-									<?php if ( '' !== $valor ) : ?>
-										<span class="vb-prod-ficha__valor"><?php echo esc_html( $valor ); ?></span>
-									<?php endif; ?>
-								</li>
-							<?php endforeach; ?>
-						</ul>
-					<?php endif; ?>
-				</section>
+					<div class="vb-prod-ficha-grupo__cols">
+						<?php foreach ( $grupo['tabelas'] as $tabela ) : ?>
+							<?php
+							$estilo = ! empty( $tabela['estilo'] ) ? $tabela['estilo'] : 'azul';
+							$titulo = isset( $tabela['titulo'] ) ? $tabela['titulo'] : '';
+							$linhas = ! empty( $tabela['linhas'] ) ? $tabela['linhas'] : array();
+							if ( '' === $titulo && empty( $linhas ) ) {
+								continue;
+							}
+							?>
+							<section class="vb-prod-ficha vb-prod-ficha--<?php echo esc_attr( $estilo ); ?>">
+								<?php if ( $titulo ) : ?>
+									<h4 class="vb-prod-ficha__titulo"><?php echo esc_html( $titulo ); ?></h4>
+								<?php endif; ?>
+								<?php if ( ! empty( $linhas ) ) : ?>
+									<ul class="vb-prod-ficha__lista">
+										<?php foreach ( $linhas as $linha ) : ?>
+											<?php
+											$campo = isset( $linha['campo'] ) ? $linha['campo'] : '';
+											$valor = isset( $linha['valor'] ) ? $linha['valor'] : '';
+											if ( '' === $campo && '' === $valor ) {
+												continue;
+											}
+											?>
+											<li class="vb-prod-ficha__item">
+												<?php if ( $campo ) : ?>
+													<span class="vb-prod-ficha__campo"><?php echo esc_html( $campo ); ?></span>
+												<?php endif; ?>
+												<?php if ( $campo && '' !== $valor ) : ?>
+													<span class="vb-prod-ficha__sep" aria-hidden="true">-</span>
+												<?php endif; ?>
+												<?php if ( '' !== $valor ) : ?>
+													<span class="vb-prod-ficha__valor"><?php echo esc_html( $valor ); ?></span>
+												<?php endif; ?>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								<?php endif; ?>
+							</section>
+						<?php endforeach; ?>
+					</div>
+				</div>
 			<?php endforeach; ?>
 		</div>
 		<?php
 		return (string) ob_get_clean();
+	}
+
+	/**
+	 * Agrupa fichas por variação (ex.: “6x5kg (SKU 500001)”).
+	 * Colunas ficam com título curto: Pacote / Pallet / Caixa / Tributação.
+	 *
+	 * @param array $tabelas Tabelas brutas.
+	 * @return array<int,array{label:string,tabelas:array}>
+	 */
+	private static function agrupar_fichas( $tabelas ) {
+		$ordem_keys = array();
+		$grupos_map = array();
+
+		foreach ( $tabelas as $tabela ) {
+			if ( ! is_array( $tabela ) ) {
+				continue;
+			}
+			$raw_titulo = isset( $tabela['titulo'] ) ? trim( (string) $tabela['titulo'] ) : '';
+			$col        = $raw_titulo;
+			$label      = '';
+
+			if ( preg_match( '/^(Pacote|Pallet|Palete|Caixa|Tributa[cç][aã]o)\s+(.+)$/iu', $raw_titulo, $m ) ) {
+				$col   = self::normalize_ficha_col_title( $m[1] );
+				$label = trim( $m[2] );
+			} else {
+				$col = self::normalize_ficha_col_title( $raw_titulo );
+			}
+
+			$key = $label ? mb_strtolower( $label ) : '_default';
+			if ( ! isset( $grupos_map[ $key ] ) ) {
+				$grupos_map[ $key ] = array(
+					'label'   => $label,
+					'tabelas' => array(),
+				);
+				$ordem_keys[] = $key;
+			}
+
+			$tabela['titulo']                = $col ? $col : $raw_titulo;
+			$grupos_map[ $key ]['tabelas'][] = $tabela;
+		}
+
+		$out = array();
+		foreach ( $ordem_keys as $key ) {
+			$out[] = $grupos_map[ $key ];
+		}
+		return $out;
+	}
+
+	/**
+	 * Normaliza nome da coluna da ficha.
+	 *
+	 * @param string $titulo Título.
+	 * @return string
+	 */
+	private static function normalize_ficha_col_title( $titulo ) {
+		$t = trim( (string) $titulo );
+		if ( '' === $t ) {
+			return '';
+		}
+		if ( preg_match( '/^tribut/iu', $t ) ) {
+			return 'Tributação';
+		}
+		if ( preg_match( '/^pallet|^palete/iu', $t ) ) {
+			return 'Pallet';
+		}
+		if ( preg_match( '/^caixa/iu', $t ) ) {
+			return 'Caixa';
+		}
+		if ( preg_match( '/^pacote/iu', $t ) ) {
+			return 'Pacote';
+		}
+		return $t;
 	}
 
 	/**
@@ -233,7 +372,7 @@ class VB_Prod_Frontend {
 				'tipo'           => 'padrao',
 				'show_image'     => true,
 				'show_marca'     => true,
-				'show_categoria' => true,
+				'show_categoria' => false,
 				'show_excerpt'   => false,
 				'show_btn'       => true,
 				'btn_text'       => '',
@@ -247,10 +386,13 @@ class VB_Prod_Frontend {
 		}
 
 		$permalink = get_permalink( $post_id );
-		$title     = get_the_title( $post_id );
-		$marca     = $opts['show_marca'] ? VB_Prod_Product::get_marca_nome( $post_id ) : '';
-		$cat       = $opts['show_categoria'] ? VB_Prod_Product::get_categoria_nome( $post_id ) : '';
-		$tipo      = sanitize_html_class( $opts['tipo'] );
+		$title     = VB_Prod_Product::get_titulo_destaque( $post_id );
+		if ( '' === $title ) {
+			$title = get_the_title( $post_id );
+		}
+		$marca = $opts['show_marca'] ? VB_Prod_Product::get_marca_nome( $post_id ) : '';
+		$cat   = $opts['show_categoria'] ? VB_Prod_Product::get_categoria_nome( $post_id ) : '';
+		$tipo  = sanitize_html_class( $opts['tipo'] );
 
 		ob_start();
 		?>
@@ -266,10 +408,11 @@ class VB_Prod_Frontend {
 				</a>
 			<?php endif; ?>
 			<div class="vb-prod-card__body">
-				<?php if ( $cat || $marca ) : ?>
-					<p class="vb-prod-card__meta">
-						<?php echo esc_html( trim( $marca . ( $marca && $cat ? ' · ' : '' ) . $cat ) ); ?>
-					</p>
+				<?php if ( $marca ) : ?>
+					<p class="vb-prod-card__marca"><?php echo esc_html( mb_strtoupper( $marca ) ); ?></p>
+				<?php endif; ?>
+				<?php if ( $cat ) : ?>
+					<p class="vb-prod-card__meta"><?php echo esc_html( $cat ); ?></p>
 				<?php endif; ?>
 				<h3 class="vb-prod-card__title">
 					<a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>

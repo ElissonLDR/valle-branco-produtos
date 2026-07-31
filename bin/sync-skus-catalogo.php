@@ -308,6 +308,8 @@ foreach ( $catalogo as $item ) {
 	}
 
 	update_post_meta( $pid, '_vb_sku', $item['sku'] );
+	update_post_meta( $pid, '_vb_catalogo', '1' );
+	delete_post_meta( $pid, '_vb_origem' );
 	update_post_meta( $pid, '_vb_marca', $item['marca'] );
 	update_post_meta( $pid, '_vb_categoria', $item['cat'] );
 	update_post_meta( $pid, '_vb_pesos', $item['pesos'] );
@@ -335,11 +337,12 @@ foreach ( $catalogo as $item ) {
 	echo "{$action} [{$item['sku']}] {$display}\n";
 }
 
-// Remove publicados que não estão no catálogo.
+// Produtos publicados fora do catálogo: marca como mapa e tira da vitrine (private).
+// Não exclui físicos com relação no mapa — só remove da vitrine.
 $all = get_posts(
 	array(
 		'post_type'      => 'vb_produto',
-		'post_status'    => 'publish',
+		'post_status'    => array( 'publish', 'private' ),
 		'posts_per_page' => -1,
 		'fields'         => 'ids',
 	)
@@ -347,12 +350,22 @@ $all = get_posts(
 $removed = 0;
 foreach ( $all as $oid ) {
 	$sku = (string) get_post_meta( $oid, '_vb_sku', true );
-	if ( ! in_array( $sku, $keep_skus, true ) ) {
-		wp_trash_post( $oid );
+	if ( in_array( $sku, $keep_skus, true ) ) {
+		continue;
+	}
+	update_post_meta( $oid, '_vb_origem', 'mapa' );
+	delete_post_meta( $oid, '_vb_catalogo' );
+	if ( 'publish' === get_post_status( $oid ) ) {
+		wp_update_post(
+			array(
+				'ID'          => $oid,
+				'post_status' => 'private',
+			)
+		);
 		++$removed;
-		echo "TRASH #{$oid} [{$sku}]\n";
+		echo "PRIVATE #{$oid} [{$sku}]\n";
 	}
 }
 
-echo "---\nSincronizados: {$ok}\nRemovidos: {$removed}\n";
+echo "---\nSincronizados: {$ok}\nRemovidos da vitrine: {$removed}\n";
 echo 'Publicados: ' . (int) wp_count_posts( 'vb_produto' )->publish . "\n";

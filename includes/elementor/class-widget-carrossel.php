@@ -74,8 +74,8 @@ class VB_Prod_Widget_Carrossel extends VB_Prod_Widget_Base {
 			'info',
 			array(
 				'type'            => \Elementor\Controls_Manager::RAW_HTML,
-				'raw'             => __( 'Usa a imagem de capa + galeria do produto.', 'valle-branco-produtos' ),
-				'content_classes' => 'elementor-descriptor',
+				'raw'             => '<div style="padding:12px;background:#1e1f22;border:1px solid #3d3f44;border-radius:6px;line-height:1.5;color:#f3f3f3;font-size:12px;">' . esc_html__( 'Usa a imagem de capa + galeria do produto.', 'valle-branco-produtos' ) . '</div>',
+				'content_classes' => '',
 			)
 		);
 		$this->end_controls_section();

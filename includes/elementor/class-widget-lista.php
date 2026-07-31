@@ -48,15 +48,17 @@ class VB_Prod_Widget_Lista extends VB_Prod_Widget_Base {
 	 */
 	protected function get_product_choices() {
 		$posts = get_posts(
-			array(
-				'post_type'              => VB_Prod_CPT::POST_TYPE,
-				'post_status'            => 'publish',
-				'posts_per_page'         => 200,
-				'orderby'                => 'title',
-				'order'                  => 'ASC',
-				'no_found_rows'          => true,
-				'update_post_meta_cache' => false,
-				'update_post_term_cache' => false,
+			VB_Prod_Product::apply_catalogo_args(
+				array(
+					'post_type'              => VB_Prod_CPT::POST_TYPE,
+					'post_status'            => 'publish',
+					'posts_per_page'         => 200,
+					'orderby'                => 'title',
+					'order'                  => 'ASC',
+					'no_found_rows'          => true,
+					'update_post_meta_cache' => false,
+					'update_post_term_cache' => false,
+				)
 			)
 		);
 		$opts = array();
@@ -826,16 +828,18 @@ class VB_Prod_Widget_Lista extends VB_Prod_Widget_Base {
 		// Com paginação, carrega o catálogo e pagina no front (compatível com filtros JS).
 		$posts_limit = $paginacao ? 100 : max( $per_page, $per_page_tablet, $per_page_mobile );
 
-		$args = array(
-			'post_type'              => VB_Prod_CPT::POST_TYPE,
-			'post_status'            => 'publish',
-			'posts_per_page'         => $posts_limit,
-			'orderby'                => isset( $s['orderby'] ) ? sanitize_key( $s['orderby'] ) : 'title',
-			'order'                  => ( isset( $s['order'] ) && 'DESC' === $s['order'] ) ? 'DESC' : 'ASC',
-			'ignore_sticky_posts'    => true,
-			'no_found_rows'          => true,
-			'update_post_meta_cache' => true,
-			'update_post_term_cache' => true,
+		$args = VB_Prod_Product::apply_catalogo_args(
+			array(
+				'post_type'              => VB_Prod_CPT::POST_TYPE,
+				'post_status'            => 'publish',
+				'posts_per_page'         => $posts_limit,
+				'orderby'                => isset( $s['orderby'] ) ? sanitize_key( $s['orderby'] ) : 'title',
+				'order'                  => ( isset( $s['order'] ) && 'DESC' === $s['order'] ) ? 'DESC' : 'ASC',
+				'ignore_sticky_posts'    => true,
+				'no_found_rows'          => true,
+				'update_post_meta_cache' => true,
+				'update_post_term_cache' => true,
+			)
 		);
 
 		if ( $is_manual ) {
@@ -853,16 +857,18 @@ class VB_Prod_Widget_Lista extends VB_Prod_Widget_Base {
 			$append_random = ( isset( $s['manual_append_random'] ) && 'yes' === $s['manual_append_random'] );
 			$random_count  = isset( $s['manual_random_count'] ) ? absint( $s['manual_random_count'] ) : 0;
 			if ( $append_random && $random_count > 0 ) {
-				$rand_args = array(
-					'post_type'              => VB_Prod_CPT::POST_TYPE,
-					'post_status'            => 'publish',
-					'posts_per_page'         => $random_count,
-					'orderby'                => 'rand',
-					'fields'                 => 'ids',
-					'no_found_rows'          => true,
-					'ignore_sticky_posts'    => true,
-					'update_post_meta_cache' => false,
-					'update_post_term_cache' => false,
+				$rand_args = VB_Prod_Product::apply_catalogo_args(
+					array(
+						'post_type'              => VB_Prod_CPT::POST_TYPE,
+						'post_status'            => 'publish',
+						'posts_per_page'         => $random_count,
+						'orderby'                => 'rand',
+						'fields'                 => 'ids',
+						'no_found_rows'          => true,
+						'ignore_sticky_posts'    => true,
+						'update_post_meta_cache' => false,
+						'update_post_term_cache' => false,
+					)
 				);
 				if ( $ids ) {
 					$rand_args['post__not_in'] = $ids;

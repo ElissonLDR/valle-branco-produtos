@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'VB_PROD_VERSION', '1.3.3' );
+define( 'VB_PROD_VERSION', '1.4.8' );
 define( 'VB_PROD_FILE', __FILE__ );
 define( 'VB_PROD_PATH', plugin_dir_path( __FILE__ ) );
 define( 'VB_PROD_URL', plugin_dir_url( __FILE__ ) );

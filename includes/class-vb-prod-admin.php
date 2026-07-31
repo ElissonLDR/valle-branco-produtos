@@ -19,8 +19,38 @@ class VB_Prod_Admin {
 	 */
 	public function hooks() {
 		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
+		add_action( 'pre_get_posts', array( $this, 'filtrar_lista_admin' ) );
 		add_filter( 'manage_' . VB_Prod_CPT::POST_TYPE . '_posts_columns', array( $this, 'columns' ) );
 		add_action( 'manage_' . VB_Prod_CPT::POST_TYPE . '_posts_custom_column', array( $this, 'column_content' ), 10, 2 );
+	}
+
+	/**
+	 * No painel, lista só produtos do catálogo cadastrado.
+	 *
+	 * @param WP_Query $query Query.
+	 */
+	public function filtrar_lista_admin( $query ) {
+		if ( ! is_admin() || ! $query instanceof WP_Query || ! $query->is_main_query() ) {
+			return;
+		}
+		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		if ( ! $screen || VB_Prod_CPT::POST_TYPE !== $screen->post_type ) {
+			return;
+		}
+		// Permite abrir um post específico na edição.
+		if ( isset( $_GET['post'] ) && absint( $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			return;
+		}
+		$meta = $query->get( 'meta_query' );
+		if ( ! is_array( $meta ) ) {
+			$meta = array();
+		}
+		$meta[] = array(
+			'key'     => VB_Prod_CPT::META_CATALOGO,
+			'value'   => '1',
+			'compare' => '=',
+		);
+		$query->set( 'meta_query', $meta );
 	}
 
 	/**

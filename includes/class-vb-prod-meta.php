@@ -89,17 +89,39 @@ class VB_Prod_Meta {
 	 */
 	public function render_dados( $post ) {
 		wp_nonce_field( 'vb_prod_save_meta', 'vb_prod_meta_nonce' );
-		$sku   = get_post_meta( $post->ID, '_vb_sku', true );
-		$pesos = get_post_meta( $post->ID, '_vb_pesos', true );
+		$sku         = get_post_meta( $post->ID, '_vb_sku', true );
+		$pesos       = get_post_meta( $post->ID, '_vb_pesos', true );
+		$embalagens  = get_post_meta( $post->ID, '_vb_embalagens', true );
+		$variacoes   = VB_Prod_Product::get_variacoes( $post->ID );
+		$vars_lines  = array();
+		foreach ( $variacoes as $v ) {
+			$vars_lines[] = implode(
+				'|',
+				array(
+					$v['sku'],
+					$v['peso'],
+					$v['embalagem'],
+					$v['gtin'],
+				)
+			);
+		}
 		?>
 		<p>
-			<label for="vb_prod_sku"><strong><?php esc_html_e( 'SKU / código SAP', 'valle-branco-produtos' ); ?></strong></label>
+			<label for="vb_prod_sku"><strong><?php esc_html_e( 'SKU principal', 'valle-branco-produtos' ); ?></strong></label>
 			<input type="text" class="widefat" id="vb_prod_sku" name="vb_prod_sku" value="<?php echo esc_attr( $sku ); ?>" autocomplete="off" />
-			<span class="description"><?php esc_html_e( 'Usado pelo Onde Encontrar / n8n.', 'valle-branco-produtos' ); ?></span>
 		</p>
 		<p>
-			<label for="vb_prod_pesos"><strong><?php esc_html_e( 'Pesos / embalagens', 'valle-branco-produtos' ); ?></strong></label>
-			<input type="text" class="widefat" id="vb_prod_pesos" name="vb_prod_pesos" value="<?php echo esc_attr( $pesos ); ?>" placeholder="1kg, 5kg" />
+			<label for="vb_prod_pesos"><strong><?php esc_html_e( 'Pesos (tags)', 'valle-branco-produtos' ); ?></strong></label>
+			<input type="text" class="widefat" id="vb_prod_pesos" name="vb_prod_pesos" value="<?php echo esc_attr( $pesos ); ?>" placeholder="5kg, 2kg" />
+		</p>
+		<p>
+			<label for="vb_prod_embalagens"><strong><?php esc_html_e( 'Embalagens (tag)', 'valle-branco-produtos' ); ?></strong></label>
+			<input type="text" class="widefat" id="vb_prod_embalagens" name="vb_prod_embalagens" value="<?php echo esc_attr( $embalagens ); ?>" placeholder="6x5kg · 15x2kg" />
+		</p>
+		<p>
+			<label for="vb_prod_variacoes"><strong><?php esc_html_e( 'Variações (1 por linha)', 'valle-branco-produtos' ); ?></strong></label>
+			<textarea class="widefat" rows="5" id="vb_prod_variacoes" name="vb_prod_variacoes" placeholder="500030|5kg|6x5kg|7896397900015"><?php echo esc_textarea( implode( "\n", $vars_lines ) ); ?></textarea>
+			<span class="description"><?php esc_html_e( 'Formato: sku|peso|embalagem|gtin', 'valle-branco-produtos' ); ?></span>
 		</p>
 		<?php
 	}
@@ -279,6 +301,26 @@ class VB_Prod_Meta {
 
 		$pesos = isset( $_POST['vb_prod_pesos'] ) ? sanitize_text_field( wp_unslash( $_POST['vb_prod_pesos'] ) ) : '';
 		update_post_meta( $post_id, '_vb_pesos', $pesos );
+
+		$embalagens = isset( $_POST['vb_prod_embalagens'] ) ? sanitize_text_field( wp_unslash( $_POST['vb_prod_embalagens'] ) ) : '';
+		update_post_meta( $post_id, '_vb_embalagens', $embalagens );
+
+		$vars_raw = isset( $_POST['vb_prod_variacoes'] ) ? sanitize_textarea_field( wp_unslash( $_POST['vb_prod_variacoes'] ) ) : '';
+		$vars     = array();
+		foreach ( preg_split( '/\r\n|\r|\n/', $vars_raw ) as $line ) {
+			$line = trim( (string) $line );
+			if ( '' === $line ) {
+				continue;
+			}
+			$parts = array_map( 'trim', explode( '|', $line ) );
+			$vars[] = array(
+				'sku'       => isset( $parts[0] ) ? sanitize_text_field( $parts[0] ) : '',
+				'peso'      => isset( $parts[1] ) ? sanitize_text_field( $parts[1] ) : '',
+				'embalagem' => isset( $parts[2] ) ? sanitize_text_field( $parts[2] ) : '',
+				'gtin'      => isset( $parts[3] ) ? sanitize_text_field( $parts[3] ) : '',
+			);
+		}
+		update_post_meta( $post_id, '_vb_variacoes', $vars );
 
 		$galeria_raw = isset( $_POST['vb_prod_galeria'] ) ? sanitize_text_field( wp_unslash( $_POST['vb_prod_galeria'] ) ) : '';
 		$galeria_ids = array_filter( array_map( 'absint', explode( ',', $galeria_raw ) ) );

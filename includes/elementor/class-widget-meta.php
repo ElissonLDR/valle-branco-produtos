@@ -194,11 +194,8 @@ class VB_Prod_Widget_Meta extends VB_Prod_Widget_Base {
 			}
 		}
 		if ( isset( $s['show_pesos'] ) && 'yes' === $s['show_pesos'] ) {
-			$pesos = VB_Prod_Product::get_pesos( $id );
-			if ( $pesos ) {
-				foreach ( array_filter( array_map( 'trim', explode( ',', $pesos ) ) ) as $peso ) {
-					echo '<span class="vb-prod-el-chip vb-prod-el-chip--outline">' . esc_html( $peso ) . '</span>';
-				}
+			foreach ( VB_Prod_Product::get_pesos_lista( $id ) as $peso ) {
+				echo '<span class="vb-prod-el-chip vb-prod-el-chip--outline">' . esc_html( $peso ) . '</span>';
 			}
 		}
 		echo '</div>';

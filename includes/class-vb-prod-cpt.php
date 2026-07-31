@@ -21,6 +21,9 @@ class VB_Prod_CPT {
 	const TAX_CATEGORIA = 'vb_categoria_produto';
 	const TAX_MARCA     = 'vb_marca';
 
+	/** Meta: produto da vitrine/portfólio (não do mapa). */
+	const META_CATALOGO = '_vb_catalogo';
+
 	/**
 	 * Registra CPT e taxonomias.
 	 */

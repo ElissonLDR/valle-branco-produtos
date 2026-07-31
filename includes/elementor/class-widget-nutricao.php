@@ -56,8 +56,8 @@ class VB_Prod_Widget_Nutricao extends VB_Prod_Widget_Base {
 			'info',
 			array(
 				'type'            => \Elementor\Controls_Manager::RAW_HTML,
-				'raw'             => __( 'Usa as tabelas do painel do produto (Pacote, Pallet, Tributação…).', 'valle-branco-produtos' ),
-				'content_classes' => 'elementor-descriptor',
+				'raw'             => '<div style="padding:12px;background:#1e1f22;border:1px solid #3d3f44;border-radius:6px;line-height:1.5;color:#f3f3f3;font-size:12px;">' . esc_html__( 'Usa as tabelas do painel do produto (Pacote, Pallet, Tributação…).', 'valle-branco-produtos' ) . '</div>',
+				'content_classes' => '',
 			)
 		);
 		$this->end_controls_section();
@@ -72,25 +72,48 @@ class VB_Prod_Widget_Nutricao extends VB_Prod_Widget_Base {
 		$this->add_control(
 			'titulo_azul',
 			array(
-				'label'     => __( 'Título azul', 'valle-branco-produtos' ),
+				'label'     => __( 'Fundo título azul', 'valle-branco-produtos' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .vb-prod-ficha--azul .vb-prod-ficha__titulo' => 'background-color: {{VALUE}};' ),
+				'selectors' => array(
+					'{{WRAPPER}} .vb-prod-ficha--azul .vb-prod-ficha__titulo' => 'background-color: {{VALUE}}; color: #ffffff !important;',
+				),
 			)
 		);
 		$this->add_control(
 			'titulo_ouro',
 			array(
-				'label'     => __( 'Título ouro', 'valle-branco-produtos' ),
+				'label'     => __( 'Fundo título ouro', 'valle-branco-produtos' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .vb-prod-ficha--ouro .vb-prod-ficha__titulo' => 'background-color: {{VALUE}};' ),
+				'selectors' => array(
+					'{{WRAPPER}} .vb-prod-ficha--ouro .vb-prod-ficha__titulo' => 'background-color: {{VALUE}}; color: #ffffff !important;',
+				),
+			)
+		);
+		$this->add_control(
+			'titulo_texto',
+			array(
+				'label'     => __( 'Texto do título', 'valle-branco-produtos' ),
+				'type'      => \Elementor\Controls_Manager::COLOR,
+				'default'   => '#FFFFFF',
+				'selectors' => array(
+					'{{WRAPPER}} .vb-prod-ficha__titulo' => 'color: {{VALUE}} !important;',
+				),
+			)
+		);
+		$this->add_control(
+			'campo_cor',
+			array(
+				'label'     => __( 'Labels (campos)', 'valle-branco-produtos' ),
+				'type'      => \Elementor\Controls_Manager::COLOR,
+				'selectors' => array( '{{WRAPPER}} .vb-prod-ficha__campo' => 'color: {{VALUE}};' ),
 			)
 		);
 		$this->add_control(
 			'texto_cor',
 			array(
-				'label'     => __( 'Texto das linhas', 'valle-branco-produtos' ),
+				'label'     => __( 'Valores', 'valle-branco-produtos' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .vb-prod-ficha__item' => 'color: {{VALUE}};' ),
+				'selectors' => array( '{{WRAPPER}} .vb-prod-ficha__valor' => 'color: {{VALUE}};' ),
 			)
 		);
 		$this->add_control(
@@ -105,7 +128,15 @@ class VB_Prod_Widget_Nutricao extends VB_Prod_Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'typo',
-				'selector' => '{{WRAPPER}} .vb-prod-ficha',
+				'selector' => '{{WRAPPER}} .vb-prod-ficha__item',
+			)
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			array(
+				'name'     => 'typo_titulo',
+				'label'    => __( 'Tipografia do título', 'valle-branco-produtos' ),
+				'selector' => '{{WRAPPER}} .vb-prod-ficha__titulo',
 			)
 		);
 		$this->add_responsive_control(
@@ -119,6 +150,7 @@ class VB_Prod_Widget_Nutricao extends VB_Prod_Widget_Base {
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} .vb-prod-fichas' => 'gap: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .vb-prod-ficha-grupo__cols' => 'gap: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);

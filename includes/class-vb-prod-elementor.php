@@ -92,6 +92,7 @@ class VB_Prod_Elementor {
 		require_once VB_PROD_PATH . 'includes/elementor/class-widget-busca.php';
 		require_once VB_PROD_PATH . 'includes/elementor/class-widget-nutricao.php';
 		require_once VB_PROD_PATH . 'includes/elementor/class-widget-meta.php';
+		require_once VB_PROD_PATH . 'includes/elementor/class-widget-tags.php';
 
 		$widgets_manager->register( new VB_Prod_Widget_Imagem() );
 		$widgets_manager->register( new VB_Prod_Widget_Titulo() );
@@ -104,5 +105,6 @@ class VB_Prod_Elementor {
 		$widgets_manager->register( new VB_Prod_Widget_Busca() );
 		$widgets_manager->register( new VB_Prod_Widget_Nutricao() );
 		$widgets_manager->register( new VB_Prod_Widget_Meta() );
+		$widgets_manager->register( new VB_Prod_Widget_Tags() );
 	}
 }
